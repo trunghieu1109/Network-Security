@@ -1,0 +1,155 @@
+\documentclass[a4paper,13pt]{report}
+\usepackage[left=3cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[utf8]{vietnam}
+\usepackage{amsmath,amsxtra,amssymb,latexsym, amscd,amsthm}
+\usepackage{indentfirst}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{todonotes}
+\usepackage{lastpage}
+\usepackage{empheq}
+% \usepackage[a4paper,margin=1in]{geometry}
+\usepackage[unicode]{hyperref}
+% \usepackage{biblatex}
+\usepackage{titlesec}
+\usepackage[vietnamese]{babel}
+\usepackage[sorting=none]{biblatex}
+\usepackage{fancyhdr}
+\fancyhead[R]{\thepage} % thiết lập nội dung mới cho header bên phải
+
+\titleformat{\section}
+{\huge\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\Large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+{\normalfont\Large\bfseries}{\thesubsubsection}{1em}{}
+% \titlespacing*{\subsubsection}{0pt}{\baselineskip}{0.5em}
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+\newcommand{\eqv}{\Leftrightarrow}
+\renewcommand\thesection{\Roman{section}}
+\renewcommand\thesubsection{\arabic{subsection}}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=gray,
+    pdftitle={BÁO CÁO GIỮA KÌ},
+    pdfpagemode=FullScreen,
+    }
+
+\usepackage{listings}
+\usepackage{color}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+\usepackage{tocloft}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+% \AtBeginDocument{\settowidth{\sectionnumwidth}{VIII.\ }}
+\begin{document}
+
+\setlength{\parindent}{0.87cm}
+\setlist[itemize]{labelsep=1em}
+\setlength{\cftsecnumwidth}{3.7em} %3.2
+% \setlength{\cftsubsecnumwidth}{\cftsecnumwidth}
+\setlength{\cftsubsecindent}{3.7em}
+\setlength{\cftsubsubsecindent}{6.05em}
+% \setlength{\cftsecindent}{-1.75em} %-1.75
+\fontsize{14pt}{18pt}\selectfont % Lệnh thay đổi cỡ chữ thành cỡ 13, cỡ dòng 18 (theo quy chuẩn của Khóa Luận TN).
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 2ex minus .2ex}{1.5ex plus .2ex}
+
+% \setlength{\baselineskip}{18truept}
+
+\begin{center}
+
+{\large\bf ĐẠI HỌC QUỐC GIA HÀ NỘI \\ 
+TRƯỜNG ĐẠI HỌC CÔNG NGHỆ}\\
+
+% {\large\bf KHOA CÔNG NGHỆ THÔNG TIN} \\
+
+{————————————————–}
+
+% \vskip 3cm
+% {\bf KHÓA LUẬN TỐT NGHIỆP}\\[1cm]
+
+\vskip 2.5cm
+\begin{center}
+    \includegraphics[width=0.35\linewidth]{figure/uet.jpg}
+\end{center}
+\vskip 2.5cm
+{\huge\bf \textbf{BÁO CÁO GIỮA KÌ}}\\
+
+\vskip 1cm
+
+{\LARGE\bf \textbf{Bộ môn: An toàn an ninh mạng}}\\
+
+\vskip 0.5cm
+
+
+{\LARGE\bf \textbf{Chương 4: Advanced Cryptography and PKI}}\\
+
+\vskip 2cm
+% \includegraphics[scale = 0.15]{UET.jpg}
+%  \vskip 1cm
+
+\begin{tabular}{r l r}
+
+Giảng viên hướng dẫn:&{\bf TS. Nguyễn Đại Thọ}\\[0.5cm]
+
+Người thực hiện:  &{\bf Nguyễn Trung Hiếu}\\[0.5cm]
+
+Mã sinh viên: & {\bf 21020017}\\[0.5cm]
+
+\end{tabular}
+
+\vskip 3cm
+
+{\bf HÀ NỘI, 07/2023}
+
+\end{center}
+
+
+% \title{Selenium}
+
+% \maketitle
+% \newpage
+% \newpage
+
+\tableofcontents
+% \thispagestyle{empty}
+% \setcounter{arabic}{3}
+% \pagestyle{plain}
+% \pagenumbering{gobble}
+
+\newpage
+
+\listoffigures
+
+\newpage
+
+\input{document/chapter4/chapter}
+% \input{document/chapter5/chapter}
+% \input{document/chapter9/chapter}
+\end{document}
